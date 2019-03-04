@@ -21,7 +21,7 @@ import (
 
 func main() {
 	http.Handle("/hello", func(w http.ResponseWriter, r *http.Request) {
-		user, err := esp.User(r)
+		user, err := esp.GetUserInfo(r)
 		if err != nil {
 			log.Panic(err)
 		}
